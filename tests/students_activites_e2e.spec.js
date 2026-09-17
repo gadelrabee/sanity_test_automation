@@ -26,6 +26,8 @@ test.describe('Students Activities E2E', () => {
 
         await loginPage.goto();
 
+        await loginPage.verifyLoginPageLoaded();
+
         await loginPage.login(ENV.username, ENV.password);
 
         await loginPage.verifyLoginSuccessful();

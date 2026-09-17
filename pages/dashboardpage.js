@@ -37,17 +37,14 @@ export class DashboardPage {
         await expect(this.studentHeading).toBeVisible();
     }
 
+     // Verify activity list is loaded (Around the School button visible)
     async verifyHomePage() {
-        // Verify student profile heading is visible
-        await expect(this.studentHeading).toBeVisible();
-        
-        // Verify activity list is loaded (Around the School button visible)
         await this.aroundSchoolButton.waitFor({ state: 'visible', timeout: 5000 });
         await expect(this.aroundSchoolButton).toBeVisible();
     }
 
+    // Verify Places in a School activity is visible and ready to start
     async verifyAroundTheSchoolOpened() {
-        // Verify Places in a School activity is visible and ready to start
         await expect(this.activityButton).toBeVisible();
     }
 }
